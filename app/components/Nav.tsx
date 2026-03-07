@@ -4,7 +4,7 @@ export default function Nav() {
     <nav className="bg-white text-black p-4 flex flex-row justify-between">
       <div>
         <a href="/">
-          <h1 className="text-xl font-semibold">Stickles Electric</h1>
+          <h1 className="hover:text-secondary-blue text-xl font-semibold text-primary-blue">Stickles Electric</h1>
         </a>
       </div>
       <ul className="flex flex-row gap-4">

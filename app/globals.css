@@ -3,19 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #133d7b;
+  --secondary-blue: #37acb1;
 }
 
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary-blue: var(--primary-blue);
+  --color-secondary-blue: var(--secondary-blue);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: var(--primary-blue);
     --foreground: #ededed;
+    --primary-blue: #133d7b;
+    --secondary-blue: #37acb1;
   }
 }
 
