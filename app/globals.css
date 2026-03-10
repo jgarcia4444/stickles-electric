@@ -5,6 +5,7 @@
   --foreground: #171717;
   --primary-blue: #133d7b;
   --secondary-blue: #37acb1;
+  --light-blue: #2053c7;
 }
 
 @theme inline {
@@ -13,6 +14,7 @@
   --font-mono: var(--font-geist-mono);
   --color-primary-blue: var(--primary-blue);
   --color-secondary-blue: var(--secondary-blue);
+  --color-light-blue: var(--light-blue)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +23,7 @@
     --foreground: #ededed;
     --primary-blue: #133d7b;
     --secondary-blue: #37acb1;
+    --light-blue: #2053c7;
   }
 }
 
