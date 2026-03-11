@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div className="w-full">
       <main className="flex flex-row w-full">
-        <div className="w-1/2 flex flex-col px-2 gap-2 py-4 items-start justify-center">
-          <h1 className="text-3xl font-bold text-white">Trusted Electrician Serving Palm Desert and Surrounding Areas</h1>
+        <div className="w-1/2 flex flex-col px-2 gap-4 py-4 items-start justify-center">
+          <h1 className="text-5xl font-thin text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
           <div className="w-full rounded-full h-1 bg-linear-to-l to-white from-primary-blue" />
-          <h2 className="text-xl text-left font-semibold mb-8 text-light-blue">Electrician Services</h2>
+          <h2 className="text-xl text-left mb-4 text-white">Reliable electrical services across Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage and surrounding communities.</h2>
           <div className="w-1/2">
             <CallNowButton />
           </div>

@@ -1,6 +1,5 @@
 'use client';
-import { PiWrenchFill } from "react-icons/pi";
-import { useState } from "react";
+import { PiWrenchFill, PiUserRectangleFill } from "react-icons/pi";
 import NavLink from "./NavLink";
 import { usePathname } from "next/navigation";
 
@@ -11,8 +10,7 @@ export default function Nav() {
 
   const navLinks = [
     { href: "/services", text: "Services", icon: <PiWrenchFill size={iconSize}  /> },
-    { href: "/about", text: "About", icon: <PiWrenchFill size={iconSize} /> },
-    { href: "/areas-we-serve", text: "Areas We Serve", icon: <PiWrenchFill size={iconSize}  /> },
+    { href: "/about", text: "About", icon: <PiUserRectangleFill size={iconSize} /> },
     { href: "/reviews", text: "Reviews", icon: <PiWrenchFill size={iconSize} /> },
     { href: "/contact", text: "Contact", icon: <PiWrenchFill size={iconSize} /> },
   ];
