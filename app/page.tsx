@@ -2,11 +2,12 @@ import Image from "next/image";
 
 import TrustBadges from "./components/Badges/TrustBadges";
 import CallNowButton from "./components/CallNowButton";
-import ServicesSection from "./components/Services/ServicesSection";
+import ServicesSection from "./components/Sections/ServicesSection";
+import WhyUsSection from "./components/Sections/WhyUsSection";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col gap-6">
       <main id="home" className="flex flex-row w-full h-screen">
         <div className="w-3/5 flex flex-col px-2 gap-4 py-4 items-start justify-center">
           <h1 className="text-5xl font-bold text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
@@ -24,6 +25,7 @@ export default function Home() {
         </div>
       </main>
       <ServicesSection />
+      <WhyUsSection />
     </div>
   );
 }

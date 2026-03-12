@@ -6,8 +6,8 @@ import {
   PiMagnifyingGlass,
   PiToggleLeft
 } from "react-icons/pi"
-import SectionHeader from "../Texts/SectionHeader";
-import ServiceCard from "./ServiceCard";
+import SectionHeader from "@/app/components/Texts/SectionHeader";
+import ServiceCard from "@/app/components/Services/ServiceCard";
 
 export default function ServicesSection() {
 
@@ -30,7 +30,7 @@ export default function ServicesSection() {
     }
 
     return (
-        <div id="services" className="w-full flex flex-col py-4">
+        <div id="services" className="py-4 w-full flex flex-col">
         <SectionHeader title="Electrical Services" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {renderServices()}
