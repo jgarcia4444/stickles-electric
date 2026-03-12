@@ -3,7 +3,8 @@ import Image from "next/image";
 import TrustBadges from "./components/Badges/TrustBadges";
 import CallNowButton from "./components/CallNowButton";
 import ServicesSection from "./components/Sections/ServicesSection";
-import WhyUsSection from "./components/Sections/WhyUsSection";
+import WhyUsSection from "@/app/components/Sections/WhyUsSection";
+import ServiceAreaSection from "@/app/components/Sections/ServiceAreaSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </main>
       <ServicesSection />
       <WhyUsSection />
+      <ServiceAreaSection />
     </div>
   );
 }
