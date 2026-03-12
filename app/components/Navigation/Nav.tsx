@@ -1,5 +1,5 @@
 'use client';
-import { PiWrenchFill, PiUserRectangleFill } from "react-icons/pi";
+import { PiWrenchFill, PiUserRectangleFill, PiStarFill, PiClipboardFill } from "react-icons/pi";
 import NavLink from "./NavLink";
 import { usePathname } from "next/navigation";
 
@@ -11,19 +11,18 @@ export default function Nav() {
   const navLinks = [
     { href: "/services", text: "Services", icon: <PiWrenchFill size={iconSize}  /> },
     { href: "/about", text: "About", icon: <PiUserRectangleFill size={iconSize} /> },
-    { href: "/reviews", text: "Reviews", icon: <PiWrenchFill size={iconSize} /> },
-    { href: "/contact", text: "Contact", icon: <PiWrenchFill size={iconSize} /> },
+    { href: "/reviews", text: "Reviews", icon: <PiStarFill size={iconSize} /> },
+    { href: "/contact", text: "Contact", icon: <PiClipboardFill size={iconSize} /> },
   ];
 
   
-
   const isSelected = (href: string) => {
     console.log(pathname, href);
     return pathname === href;
   };
 
   return (
-    <nav className=" p-4 flex flex-row justify-between bg-light-blue">
+    <nav className="p-4 flex flex-row justify-between bg-light-blue fixed top-0 left-0 right-0 z-50">
       <div>
         <a href="/">
           <h1 className="hover:text-secondary-blue text-xl font-semibold text-white">Stickles Electric</h1>
