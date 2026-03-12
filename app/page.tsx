@@ -1,15 +1,17 @@
 import Image from "next/image";
+
 import TrustBadges from "./components/Badges/TrustBadges";
 import CallNowButton from "./components/CallNowButton";
+import ServicesSection from "./components/Services/ServicesSection";
 
 export default function Home() {
   return (
     <div className="w-full">
       <main id="home" className="flex flex-row w-full h-screen">
         <div className="w-3/5 flex flex-col px-2 gap-4 py-4 items-start justify-center">
-          <h1 className="text-5xl font-thin text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
+          <h1 className="text-5xl font-bold text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
           <div className="w-full rounded-full h-1 bg-linear-to-l to-white from-primary-blue" />
-          <h2 className="text-xl text-left text-white">Reliable electrical services across Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage and surrounding communities.</h2>
+          <h2 className="text-lg text-left text-white font-thin">Reliable electrical services across Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage and surrounding communities.</h2>
           <div className="w-1/2">
             <CallNowButton />
           </div>
@@ -21,6 +23,7 @@ export default function Home() {
           <Image className="mx-auto rounded w-auto h-auto" src="/work-truck.jpeg" alt="Work Truck" width={500} height={500} />
         </div>
       </main>
+      <ServicesSection />
     </div>
   );
 }
