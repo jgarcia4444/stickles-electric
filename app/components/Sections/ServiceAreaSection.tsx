@@ -17,7 +17,8 @@ export default function ServiceAreaSection() {
     const renderCities = () => {
         return citiesServing.map((city, index) => (
             <div key={index} className="flex flex-col items-center relative w-56 h-32">
-                <img src={city.imgUrl} alt={city.city} className="object-cover rounded-lg absolute top-0 left-0 w-full h-full z-0" />
+                <div className="absolute bg-black/20 rounded-lg hover:bg-opacity-0 transition-all duration-300 w-full h-full top-0 left-0" />
+                <img src={city.imgUrl} alt={city.city} className="object-cover rounded-lg absolute top-0 left-0 w-full h-full -z-10" />
                 <h3 className="text-white text-lg font-bold z-10">{city.city}</h3>
             </div>
         ));
