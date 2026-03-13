@@ -3,10 +3,10 @@ import SectionHeader from "../Texts/SectionHeader";
 
 export default function WhyUsSection() {
 
-    const reasons: string[] = ["Licensed and insured electricians", "Honest, upfront pricing", "Fast and reliable service", "Experienced troubleshooting", "Local knowledge of desert homes and electrical systems"];
+    const reasons: string[] = ["Licensed and insured electricians", "Honest, upfront pricing", "Fast and reliable service", "Experienced troubleshooting", "Local knowledge of desert homes"];
 
     const reasonCard = (reason: string, index: number) : ReactNode => (
-        <div key={index} className="bg-light-blue/20 shadow p-4 rounded-lg">
+        <div key={index} className="bg-light-blue/20 shadow p-4 rounded-lg text-center">
             {reason}
         </div>
     );

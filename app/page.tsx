@@ -5,6 +5,8 @@ import CallNowButton from "./components/CallNowButton";
 import ServicesSection from "./components/Sections/ServicesSection";
 import WhyUsSection from "@/app/components/Sections/WhyUsSection";
 import ServiceAreaSection from "@/app/components/Sections/ServiceAreaSection";
+import AboutSection from "@/app/components/Sections/AboutSection";
+import CTASection from "@/app/components/Sections/CTASection";
 
 export default function Home() {
   return (
@@ -22,12 +24,14 @@ export default function Home() {
           </div>
         </div>
         <div className="w-2/5 px-2 flex flex-col items-center justify-center">
-          <Image className="mx-auto rounded w-auto h-auto" src="/work-truck.jpeg" alt="Work Truck" width={500} height={500} />
+          <Image className="mx-auto rounded w-auto h-auto" src="/images/work-truck.jpeg" alt="Work Truck" width={500} height={500} />
         </div>
       </main>
       <ServicesSection />
       <WhyUsSection />
       <ServiceAreaSection />
+      <AboutSection />
+      <CTASection />
     </div>
   );
 }
