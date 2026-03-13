@@ -8,6 +8,7 @@ import ServiceAreaSection from "@/app/components/Sections/ServiceAreaSection";
 import AboutSection from "@/app/components/Sections/AboutSection";
 import CTASection from "@/app/components/Sections/CTASection";
 import CustomerReviewsSection from "@/app/components/Sections/CustomerReviewsSection";
+import ContactSection from "@/app/components/Sections/ContactSection";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <ServiceAreaSection />
       <AboutSection />
       <CTASection />
+      <ContactSection />
     </div>
   );
 }
