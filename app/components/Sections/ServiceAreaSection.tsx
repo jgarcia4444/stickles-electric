@@ -1,5 +1,7 @@
 import Image from "next/image";
 import SectionHeader from "../Texts/SectionHeader";
+import AnimateIn from "../Animations/AnimateIn";
+import StaggerChildren from "../Animations/StaggerChildren";
 
 export default function ServiceAreaSection() {
 
@@ -26,11 +28,15 @@ export default function ServiceAreaSection() {
 
     return (
         <div className="py-4">
-            <SectionHeader title="Serving the Entire Coachella Valley" />
-            <p className="text-white text-lg mb-4">We proudly provide electrical services throughout the Coachella Valley, including Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage, Cathedral City, and nearby communities.</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <AnimateIn>
+                <SectionHeader title="Serving the Entire Coachella Valley" />
+            </AnimateIn>
+            <AnimateIn delay={0.2}>
+                <p className="text-white text-lg mb-4">We proudly provide electrical services throughout the Coachella Valley, including Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage, Cathedral City, and nearby communities.</p>
+            </AnimateIn>
+            <StaggerChildren staggerDelay={0.1} childDelay={0.4} direction="up" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {renderCities()}
-            </div>
+            </StaggerChildren>
         </div>
     );
 }

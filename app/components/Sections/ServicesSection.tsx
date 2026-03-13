@@ -8,6 +8,8 @@ import {
 } from "react-icons/pi"
 import SectionHeader from "@/app/components/Texts/SectionHeader";
 import ServiceCard from "@/app/components/Services/ServiceCard";
+import AnimateIn from "@/app/components/Animations/AnimateIn";
+import StaggerChildren from "@/app/components/Animations/StaggerChildren";
 
 export default function ServicesSection() {
 
@@ -31,10 +33,12 @@ export default function ServicesSection() {
 
     return (
         <div id="services" className="py-4 w-full flex flex-col">
+        <AnimateIn>
         <SectionHeader title="Electrical Services" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        </AnimateIn>
+        <StaggerChildren staggerDelay={0.1} childDelay={0.2} direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {renderServices()}
-        </div>
+        </StaggerChildren>
         </div>
     );
 }

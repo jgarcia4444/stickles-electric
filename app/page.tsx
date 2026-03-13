@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import TrustBadges from "./components/Badges/TrustBadges";
 import CallNowButton from "./components/CallNowButton";
+import AnimateIn from "./components/Animations/AnimateIn";
 import ServicesSection from "./components/Sections/ServicesSection";
 import WhyUsSection from "@/app/components/Sections/WhyUsSection";
 import ServiceAreaSection from "@/app/components/Sections/ServiceAreaSection";
@@ -15,19 +16,27 @@ export default function Home() {
     <div className="w-full flex flex-col gap-6">
       <main id="home" className="flex flex-row flex-wrap w-full md:h-screen relative">
         <div className="md:w-3/5 w-full flex flex-col px-2 gap-4 py-4 items-start justify-center z-10">
-          <h1 className="text-5xl font-bold text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
-          <div className="w-full rounded-full h-1 bg-linear-to-l to-white from-primary-blue" />
-          <h2 className="text-lg text-left text-white font-thin">Reliable electrical services across Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage and surrounding communities.</h2>
-          <div className="w-1/2">
-            <CallNowButton />
-          </div>
-          <div className="w-full">
-            <TrustBadges />
-          </div>
+          <AnimateIn delay={0.2} direction="left">
+            <h1 className="text-5xl font-bold text-light-blue">Trusted Electrician Serving the Coachella Valley</h1>
+          </AnimateIn>
+          <AnimateIn delay={0.4} direction="left">
+            <div className="w-full rounded-full h-1 bg-linear-to-l to-white from-primary-blue" />
+          </AnimateIn>
+          <AnimateIn delay={0.6} direction="left">
+            <h2 className="text-lg text-left text-white font-thin">Reliable electrical services across Palm Springs, Palm Desert, Indio, La Quinta, Rancho Mirage and surrounding communities.</h2>
+          </AnimateIn>
+          <AnimateIn className="w-1/2" delay={0.8} direction="up">
+              <CallNowButton />
+          </AnimateIn>
+          <AnimateIn delay={1.0} direction="up">
+            <div className="w-full">
+              <TrustBadges />
+            </div>
+          </AnimateIn>
         </div>
-        <div className="md:w-2/5 w-full px-2 flex flex-col items-center justify-center">
+        <AnimateIn delay={0.3} direction="right" className="md:w-2/5 w-full px-2 flex flex-col items-center justify-center">
           <Image className="mx-auto rounded w-auto h-auto" src="/images/work-truck.jpeg" alt="Work Truck" width={500} height={500} />
-        </div>
+        </AnimateIn>
       </main>
       <ServicesSection />
       <WhyUsSection />

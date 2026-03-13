@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import SectionHeader from "../Texts/SectionHeader";
+import AnimateIn from "../Animations/AnimateIn";
+import StaggerChildren from "../Animations/StaggerChildren";
 
 export default function WhyUsSection() {
 
@@ -13,10 +15,12 @@ export default function WhyUsSection() {
 
     return (
         <div className="py-4">
-            <SectionHeader title="Why Choose Us?" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <AnimateIn>
+                <SectionHeader title="Why Choose Us?" />
+            </AnimateIn>
+            <StaggerChildren staggerDelay={0.1} childDelay={0.2} direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {reasons.map((reason, index) => reasonCard(reason, index))}
-            </div>
+            </StaggerChildren>
         </div>
     );
 }
