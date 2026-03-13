@@ -7,6 +7,7 @@ import WhyUsSection from "@/app/components/Sections/WhyUsSection";
 import ServiceAreaSection from "@/app/components/Sections/ServiceAreaSection";
 import AboutSection from "@/app/components/Sections/AboutSection";
 import CTASection from "@/app/components/Sections/CTASection";
+import CustomerReviewsSection from "@/app/components/Sections/CustomerReviewsSection";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       </main>
       <ServicesSection />
       <WhyUsSection />
+      <CustomerReviewsSection />
       <ServiceAreaSection />
       <AboutSection />
       <CTASection />
