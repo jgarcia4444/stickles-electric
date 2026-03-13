@@ -1,11 +1,13 @@
 'use client';
-import { PiWrenchFill, PiUserRectangleFill, PiStarFill, PiClipboardFill } from "react-icons/pi";
+import { PiWrenchFill, PiUserRectangleFill, PiStarFill, PiClipboardFill, PiList, PiListFill } from "react-icons/pi";
 import NavLink from "./NavLink";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Nav() {
 
-  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const iconSize = 20;
 
   const navLinks = [
@@ -15,21 +17,23 @@ export default function Nav() {
     { href: "#contact", text: "Contact", icon: <PiClipboardFill size={iconSize} /> },
   ];
 
-  
-  // const isSelected = (href: string) => {
-  //   console.log(pathname, href);
-  //   return pathname === href;
-  // };
-
   return (
-    <nav className="py-4 px-6 flex flex-row justify-between bg-light-blue sticky md:fixed top-0 left-0 right-0 z-50">
+    <nav className="py-2 px-6 flex flex-row justify-between items-center bg-light-blue sticky md:fixed top-0 left-0 right-0 z-50">
       <div>
-        <a href="/">
-          <h1 className="hover:text-primary-blue text-xl font-semibold text-white">Stickles Electric</h1>
+        <a className="flex flex-row items-center gap-2" href="/">
+          <Image src="/logo.png" alt="Stickles Electric" width={40} height={40}/>
+          <h1 className="hover:text-primary-blue text-xl hidden md:block font-semibold text-white">Stickles Electric</h1>
         </a>
       </div>
-      <div className="flex flex-row gap-4 text-primary-blue">
+      <div className="flex-row gap-4 text-primary-blue hidden md:flex">
         {navLinks.map((link) => <NavLink key={link.href} href={link.href} text={link.text} icon={link.icon} />)}
+      </div>
+      <div className="flex-row gap-4 text-primary-blue md:hidden relative">
+        {!isMenuOpen && <PiList className="cursor-pointer hover:scale-105 transition-transform active:scale-95" size={32} color="#fff" onClick={() => setIsMenuOpen(!isMenuOpen)} />}
+        {isMenuOpen && <PiListFill className="cursor-pointer hover:scale-105 transition-transform active:scale-95" size={32} color="#fff" onClick={() => setIsMenuOpen(!isMenuOpen)} />}
+        {isMenuOpen && <div className="absolute top-8 right-0 bg-light-blue p-2 rounded-lg flex flex-col items-start gap-2 shadow-md">
+          {navLinks.map((link) => <NavLink key={link.href} href={link.href} text={link.text} icon={link.icon} />)}
+        </div>}
       </div>
     </nav>
   );

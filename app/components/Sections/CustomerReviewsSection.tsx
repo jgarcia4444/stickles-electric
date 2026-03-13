@@ -5,7 +5,7 @@ import Reviews from "../Reviews/Reviews";
 
 export default function CustomerReviewsSection() {
     return (
-        <div className="py-4">
+        <div id="reviews" className="py-4">
             <AnimateIn>
                 <SectionHeader title="What Our Customers Say" />
             </AnimateIn>
