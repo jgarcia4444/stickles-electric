@@ -22,7 +22,7 @@ export default function Nav() {
   // };
 
   return (
-    <nav className="py-4 px-6 flex flex-row justify-between bg-light-blue fixed top-0 left-0 right-0 z-50">
+    <nav className="py-4 px-6 flex flex-row justify-between bg-light-blue sticky md:fixed top-0 left-0 right-0 z-50">
       <div>
         <a href="/">
           <h1 className="hover:text-primary-blue text-xl font-semibold text-white">Stickles Electric</h1>
