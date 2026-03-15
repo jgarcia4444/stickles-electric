@@ -33,12 +33,12 @@ export default function ServicesSection() {
 
     return (
         <div id="services" className="py-4 w-full flex flex-col">
-        <AnimateIn>
-        <SectionHeader title="Electrical Services" />
-        </AnimateIn>
-        <StaggerChildren staggerDelay={0.1} childDelay={0.2} direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {renderServices()}
-        </StaggerChildren>
+            <AnimateIn>
+            <SectionHeader title="Electrical Services" />
+            </AnimateIn>
+            <StaggerChildren staggerDelay={0.1} childDelay={0.2} direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {renderServices()}
+            </StaggerChildren>
         </div>
     );
 }
