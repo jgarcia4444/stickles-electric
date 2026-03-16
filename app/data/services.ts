@@ -32,16 +32,22 @@ const services: Record<string, Service> = {
     "lighting-installation": {
         title: "Lighting Installation",
         briefDescription: "We offer a wide range of lighting installation services to keep your home and business running smoothly.",
+        description: "Proper lighting plays an important role in both the functionality and appearance of your home. Professional lighting installation ensures fixtures are safely wired and positioned to provide the right level of illumination for each space. From interior lighting upgrades to outdoor security lighting, professionally installed lighting can improve comfort, safety, and energy efficiency. We install a variety of lighting solutions including recessed lighting, accent lighting, outdoor landscape lighting, and security lighting. Our goal is to create lighting setups that enhance your home while ensuring safe and reliable electrical connections.",
+        reasons: ['Upgrading outdated or inefficient fixtures', 'Adding recessed lighting for a modern look', 'Installing outdoor lighting for security and visibility', 'Improving lighting in kitchens, living rooms, or workspaces', 'Enhancing landscaping with exterior lighting'],
         icon: "LIGHTBULB"
     },
     "trouble-shooting-&-diagnostics": {
         title: "Trouble Shooting & Diagnostics",
         briefDescription: "We offer a wide range of trouble shooting and diagnostics services to keep your home and business running smoothly.",
+        description: "Electrical problems are not always obvious. Flickering lights, unexplained power loss, or frequently tripped breakers can be symptoms of deeper electrical issues. Our troubleshooting and diagnostic services identify the root cause of electrical problems so they can be resolved safely and effectively. Using professional tools and experience, we inspect wiring, circuits, and electrical components to pinpoint the exact issue. Once the problem is identified, we can recommend the best solution to restore safe and reliable electrical operation.",
+        reasons: ["Power outages in specific rooms or circuits", "Lights flicker when appliances turn on", "Breakers trip without a clear cause", "Electrical devices stop working unexpectedly", "Strange buzzing or humming sounds from electrical systems", "Intermittent power issues throughout the home"],
         icon: "SEARCH"
     },
     "outlet-&-switch-installation": {
         title: "Outlet & Switch Installation",
         briefDescription: "We offer a wide range of outlet & switch installation services to keep your home and business running smoothly.",
+        description: "Outlets and switches are essential components of any electrical system, providing convenient and safe access to power throughout your home. Installing new outlets or replacing outdated switches can improve both functionality and safety. Whether you're upgrading older components or adding new outlets to accommodate modern devices, proper installation is critical to ensure safe electrical connections. We install and replace a variety of outlets and switches, including standard outlets, GFCI outlets for kitchens and bathrooms, and modern switches for lighting control. Our installations follow electrical code requirements and ensure reliable power access throughout your home.",
+        reasons: ["Installing additional outlets for convenience", "Replacing worn or damaged outlets", "Upgrading to GFCI outlets in kitchens or bathrooms", "Installing new switches for lighting upgrades", "Eliminating unsafe extension cord usage", "Updating outdated electrical components"],
         icon: "SWITCH"
     }
 } 
