@@ -58,7 +58,7 @@ export default async function ServicePage({params}: {params: {slug: string}}) {
                     {renderReasons()}
                 </div>
             </div>
-            <div className="w-1/2 mx-auto mt-4" delay={0.3}>
+            <div className="w-1/2 mx-auto mt-4">
                 <CallNowButton />
             </div>
         </div>
