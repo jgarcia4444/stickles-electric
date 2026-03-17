@@ -68,7 +68,7 @@ const services: Record<string, Service> = {
   "home lighting installation service",
   "lighting contractor near me"],
     },
-    "trouble-shooting-&-diagnostics": {
+    "troubleshooting-%26-diagnostics": {
         title: "Trouble Shooting & Diagnostics",
         briefDescription: "We offer a wide range of trouble shooting and diagnostics services to keep your home and business running smoothly.",
         description: "Electrical problems are not always obvious. Flickering lights, unexplained power loss, or frequently tripped breakers can be symptoms of deeper electrical issues. Our troubleshooting and diagnostic services identify the root cause of electrical problems so they can be resolved safely and effectively. Using professional tools and experience, we inspect wiring, circuits, and electrical components to pinpoint the exact issue. Once the problem is identified, we can recommend the best solution to restore safe and reliable electrical operation.",
@@ -85,7 +85,7 @@ const services: Record<string, Service> = {
   "electrical problem detection service",
   "licensed electrician troubleshooting"]
     },
-    "outlet-&-switch-installation": {
+    "outlet-%26-switch-installation": {
         title: "Outlet & Switch Installation",
         briefDescription: "We offer a wide range of outlet & switch installation services to keep your home and business running smoothly.",
         description: "Outlets and switches are essential components of any electrical system, providing convenient and safe access to power throughout your home. Installing new outlets or replacing outdated switches can improve both functionality and safety. Whether you're upgrading older components or adding new outlets to accommodate modern devices, proper installation is critical to ensure safe electrical connections. We install and replace a variety of outlets and switches, including standard outlets, GFCI outlets for kitchens and bathrooms, and modern switches for lighting control. Our installations follow electrical code requirements and ensure reliable power access throughout your home.",

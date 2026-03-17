@@ -7,8 +7,9 @@ import CallNowButton from "@/app/components/CallNowButton";
 
 export async function generateMetadata({params}: {params: {slug: string}}) {
     const paramsData = await params;
+    console.log("paramsData", paramsData);
     const service = services[paramsData.slug]
-    console.log(service.title);
+    console.log("service", service);
     const {title, briefDescription, keywords} = service;
   return {
     title: `${title} | Coachella Valley Electrician`,
@@ -45,27 +46,21 @@ export default async function ServicePage({params}: {params: {slug: string}}) {
     }
 
     return (
-        <div className="mx-auto px-4 py-8 w-full h-screen flex flex-col items-center justify-center gap-4">
-            <div className="">
-                <AnimateIn className="flex flex-row flex-wrap items-end gap-4 justify-center w-full">
+        <div className="mx-auto px-4 py-8 w-full h-auto flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-row items-end gap-4 mt-8">
                     <h1 className="text-4xl font-bold mb-4">{title}</h1>
                     <p className="text-lg">{iconMap[icon]}</p>
-                </AnimateIn>
             </div>
-            <AnimateIn delay={0.2}>
-                <p className="text-lg mb-4">{description}</p>
-            </AnimateIn>
+            <p className="text-lg mb-4">{description}</p>
             <div className="flex flex-col gap-2">
-                <AnimateIn delay={0.4}>
-                    <h2 className="text-2xl font-bold mb-2">Reasons Why You Might Need This Service:</h2>
-                    <div className="flex flex-row flex-wrap gap-2">
-                        {renderReasons()}
-                    </div>
-                </AnimateIn>
+                <h2 className="text-2xl font-bold mb-2">Reasons Why You Might Need This Service:</h2>
+                <div className="flex flex-row flex-wrap gap-2">
+                    {renderReasons()}
+                </div>
             </div>
-            <AnimateIn className="w-1/2 mx-auto mt-4" delay={0.5}>
+            <div className="w-1/2 mx-auto mt-4" delay={0.3}>
                 <CallNowButton />
-            </AnimateIn>
+            </div>
         </div>
     );
 }
