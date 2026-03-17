@@ -1,23 +1,25 @@
 import {PiLightning, PiBatteryCharging, PiPlug, PiLightbulb, PiMagnifyingGlass, PiToggleLeft} from "react-icons/pi";
+import { ReactNode } from "react";
 
 import services from "@/app/data/services";
-import { ReactNode } from "react";
 import AnimateIn from "@/app/components/Animations/AnimateIn";
-import { div } from "framer-motion/client";
 import CallNowButton from "@/app/components/CallNowButton";
 
 export async function generateMetadata({params}: {params: {slug: string}}) {
-    const service = await services[params.slug]
+    const paramsData = await params;
+    const service = services[paramsData.slug]
+    console.log(service.title);
+    const {title, briefDescription, keywords} = service;
   return {
-    title: `${service.title} | Coachella Valley Electrician`,
-    description: service.briefDescription,
+    title: `${title} | Coachella Valley Electrician`,
+    description: briefDescription,
+    keywords: keywords,
   };
 }
 
 export default async function ServicePage({params}: {params: {slug: string}}) {
     const paramsData = await params;
     const service = services[paramsData.slug];
-    console.log(service);
     const {title, description, briefDescription, reasons, icon} = service;
     const color = "#fff"
     const iconSize = 62;
