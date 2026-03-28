@@ -23,7 +23,7 @@ export default function ServicesSection() {
         {title: "Troubleshooting & Diagnostics", description: "Experiencing flickering lights, tripped breakers, or electrical issues? Our troubleshooting service identifies the root cause of electrical problems so they can be fixed quickly and safely.", icon: <PiMagnifyingGlass size={iconSize} />},
         {title: "Outlet & Switch Installation", description: "Install new outlets and switches or replace outdated ones to improve safety and convenience. We ensure proper wiring and code-compliant installation for reliable everyday use.", icon: <PiToggleLeft size={iconSize} />},
     ];
-
+    
     const renderServices = () => {
         return services.map((service, index) => {
             const {title, description, icon} = service;

@@ -7,9 +7,7 @@ import CallNowButton from "@/app/components/CallNowButton";
 
 export async function generateMetadata({params}: {params: {slug: string}}) {
     const paramsData = await params;
-    console.log("paramsData", paramsData);
     const service = services[paramsData.slug]
-    console.log("service", service);
     const {title, briefDescription, keywords} = service;
   return {
     title: `${title} | Coachella Valley Electrician`,
