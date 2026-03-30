@@ -1,4 +1,3 @@
-// https://www.stickleselectric.com/
 
 import { MetadataRoute } from "next";
 import services from "@/app/data/services";
