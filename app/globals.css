@@ -26,6 +26,15 @@
     --light-blue: #2053c7;
   }
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--primary-blue);
+    --foreground: #ededed;
+    --primary-blue: #133d7b;
+    --secondary-blue: #37acb1;
+    --light-blue: #2053c7;
+  }
+}
 
 body {
   background: var(--background);
